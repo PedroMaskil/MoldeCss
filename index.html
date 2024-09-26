@@ -9,18 +9,20 @@
         body {
             font-family: Arial, sans-serif;
         }
+
         h1 {
             color: #4CAF50;
         }
+
         p {
             font-size: 16px;
             line-height: 1.6;
         }
-        .exemplo {
-            background-color: #f4f4f4;
-            padding: 10px;
-            margin: 10px 0;
+
+        .texto-vermelho {
+            color: red;
         }
+
         .caixa {
             width: 200px;
             height: 200px;
@@ -30,12 +32,80 @@
             align-items: center;
             justify-content: center;
         }
-        .texto-vermelho {
-            color: red;
-        }
+
         .borda {
             border: 2px solid black;
             padding: 10px;
+        }
+
+        .borda-arredondada {
+            width: 200px;
+            height: 200px;
+            background-color: #FF9800;
+            border-radius: 15px;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .gradiente {
+            width: 200px;
+            height: 200px;
+            background: linear-gradient(45deg, #FF5722, #FFC107);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .animacao {
+            width: 100px;
+            height: 100px;
+            background-color: #4CAF50;
+            animation: girar 2s infinite linear;
+        }
+
+        @keyframes girar {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .flex-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 200px;
+            background-color: #f1f1f1;
+        }
+
+        .flex-item {
+            background-color: #f44336;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .hover-efeito {
+            padding: 10px 20px;
+            background-color: #00BCD4;
+            color: white;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .hover-efeito:hover {
+            background-color: #00796B;
+        }
+
+        .transparente {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 20px;
         }
     </style>
 </head>
@@ -67,20 +137,90 @@
     padding: 10px;
 }</code></pre>
 
-    <h2>Exemplo de Lista</h2>
-    <ul>
-        <li>Item 1</li>
-        <li>Item 2</li>
-        <li>Item 3</li>
-    </ul>
-    <pre><code>ul {
-    list-style-type: disc;
+    <h2>Bordas Arredondadas</h2>
+    <div class="borda-arredondada">Bordas Arredondadas</div>
+    <pre><code>.borda-arredondada {
+    width: 200px;
+    height: 200px;
+    background-color: #FF9800;
+    border-radius: 15px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }</code></pre>
 
-    <h2>Fontes e Tamanhos</h2>
-    <p style="font-size: 20px;">Este é um texto com 20px de tamanho de fonte.</p>
-    <pre><code>p {
-    font-size: 20px;
+    <h2>Gradiente</h2>
+    <div class="gradiente">Gradiente</div>
+    <pre><code>.gradiente {
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(45deg, #FF5722, #FFC107);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}</code></pre>
+
+    <h2>Animação</h2>
+    <div class="animacao"></div>
+    <pre><code>.animacao {
+    width: 100px;
+    height: 100px;
+    background-color: #4CAF50;
+    animation: girar 2s infinite linear;
+}
+
+@keyframes girar {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}</code></pre>
+
+    <h2>Flexbox</h2>
+    <div class="flex-container">
+        <div class="flex-item">Item 1</div>
+        <div class="flex-item">Item 2</div>
+        <div class="flex-item">Item 3</div>
+    </div>
+    <pre><code>.flex-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 200px;
+    background-color: #f1f1f1;
+}
+
+.flex-item {
+    background-color: #f44336;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}</code></pre>
+
+    <h2>Efeito Hover</h2>
+    <a href="#" class="hover-efeito">Passe o mouse aqui</a>
+    <pre><code>.hover-efeito {
+    padding: 10px 20px;
+    background-color: #00BCD4;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.hover-efeito:hover {
+    background-color: #00796B;
+}</code></pre>
+
+    <h2>Transparência</h2>
+    <div class="transparente">Este é um fundo transparente (50%)</div>
+    <pre><code>.transparente {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 20px;
 }</code></pre>
 
 </body>
